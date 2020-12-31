@@ -96,15 +96,13 @@ function draw() {
 
     particle.display();
 
-    if(particle.x < 300 && particle.y > 700){
+    if(particle.body.x < 300 && particle.body.y > 700){
       score = score + 500;
       particle = null;
-    }
-    if(particle.x > 300 && particle.x < 400 && particle.y > 700){
+    }else if(particle.body.x > 300 && particle.body.x < 400 && particle.body.y > 700){
       score = score + 100;
       particle = null;
-    }
-    if(particle.x > 400 && particle.y > 700){
+    }else if(particle.body.x > 400 && particle.body.y > 700){
       score = score + 200;
       particle = null;
     }
